@@ -1,8 +1,12 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const os = require('os');
+import rotaAluno from "./Routes/rotaAluno.js";
+import express from "express";
+import bodyParser from "body-parser";
+// const bodyParser = require('body-parser');
+// const os = require('os');
+import os from "os";
 
 const app = express();
+
 app.get('/', (req, res) => {
     return res
     .status(200)
@@ -11,6 +15,7 @@ app.get('/', (req, res) => {
         mensagem: "ok"
     });
 });
+
 
 app.get('/liveness', (req, res) => {
     // retorna se a aplicação está viva (disponivel)
@@ -37,4 +42,4 @@ app.get('/readiness', (req, res) => {
 });
 
 
-module.exports = app;
+export default app;

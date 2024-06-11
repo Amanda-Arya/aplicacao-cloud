@@ -6,7 +6,7 @@ export default async function conectar() {
   }
 
   const conn = mysql.createPool({
-    host: mysql,
+    host: "localhost",
     user: "root",
     password: "admin1234",
     database: "aplication-cloud",

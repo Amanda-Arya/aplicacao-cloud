@@ -6,11 +6,10 @@ export default async function conectar() {
   }
 
   const conn = mysql.createPool({
-    host: "localhost",
+    host: mysql,
     user: "root",
     password: "admin1234",
-    database: "aprata",
-    dateStrings: "date",
+    database: "aplication-cloud",
   });
 
   global.conexao = conn;

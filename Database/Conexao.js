@@ -10,6 +10,7 @@ export default async function conectar() {
     user: "root",
     password: "admin1234",
     database: "aplication-cloud",
+    port: 3306,
   });
 
   global.conexao = conn;
